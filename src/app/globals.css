@@ -1,0 +1,270 @@
+@import "tailwindcss";
+
+/* ============================================================
+   Tailwind v4 @theme — Maps design tokens to utility classes
+   ============================================================ */
+@theme inline {
+  /* Colors */
+  --color-midnight: #0A0E1A;
+  --color-deep-navy: #111827;
+  --color-slate-blue: #1E293B;
+  --color-twilight: #312E81;
+  --color-amber-glow: #F59E0B;
+  --color-sunset-orange: #EA580C;
+  --color-cinema-red: #DC2626;
+  --color-starlight: #F1F5F9;
+  --color-moonstone: #94A3B8;
+  --color-dusk: #475569;
+  --color-screen-white: #FFFFFF;
+  --color-success: #10B981;
+  --color-error: #EF4444;
+
+  /* Font families */
+  --font-display: var(--font-bebas-neue), Impact, sans-serif;
+  --font-body: var(--font-outfit), system-ui, -apple-system, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), "Fira Code", monospace;
+
+  /* Shadows */
+  --shadow-raised: 0 1px 3px rgba(0, 0, 0, 0.4);
+  --shadow-elevated: 0 4px 12px rgba(0, 0, 0, 0.5);
+  --shadow-glow-amber: 0 0 30px rgba(245, 158, 11, 0.2);
+  --shadow-glow-amber-strong: 0 0 50px rgba(245, 158, 11, 0.35);
+  --shadow-card-hover: 0 8px 24px rgba(0, 0, 0, 0.6);
+
+  /* Easings */
+  --ease-cinematic: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --ease-snap: cubic-bezier(0.2, 0, 0, 1);
+}
+
+/* ============================================================
+   CSS Custom Properties — Semantic tokens, gradients, layout
+   ============================================================ */
+:root {
+  /* Semantic backgrounds */
+  --bg-primary: #0A0E1A;
+  --bg-surface: #111827;
+  --bg-surface-alt: #1E293B;
+
+  /* Borders */
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --border-default: rgba(255, 255, 255, 0.10);
+
+  /* Gradients */
+  --gradient-night-sky: linear-gradient(180deg, #0A0E1A 0%, #1E293B 50%, #312E81 100%);
+  --gradient-amber-horizon: linear-gradient(135deg, #F59E0B 0%, #EA580C 100%);
+  --gradient-twilight-fade: linear-gradient(180deg, #312E81 0%, #0A0E1A 100%);
+  --gradient-screen-glow: radial-gradient(ellipse at center, rgba(245, 158, 11, 0.15) 0%, transparent 70%);
+  --gradient-hero-overlay: linear-gradient(to right, rgba(10, 14, 26, 0.85) 0%, rgba(10, 14, 26, 0.4) 60%, transparent 100%);
+  --gradient-card-overlay: linear-gradient(180deg, transparent 40%, rgba(10, 14, 26, 0.9) 100%);
+
+  /* Motion */
+  --duration-fast: 150ms;
+  --duration-base: 250ms;
+  --duration-slow: 400ms;
+  --duration-cinematic: 800ms;
+
+  /* Layout */
+  --grid-max-width: 1440px;
+  --grid-content-width: 1200px;
+  --grid-narrow-width: 720px;
+
+  /* Z-index */
+  --z-base: 0;
+  --z-dropdown: 10;
+  --z-sticky: 20;
+  --z-overlay: 30;
+  --z-modal: 40;
+  --z-toast: 50;
+}
+
+/* ============================================================
+   Base Styles
+   ============================================================ */
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--color-starlight);
+  font-family: var(--font-body);
+}
+
+/* Offset anchors for sticky nav */
+section[id] {
+  scroll-margin-top: 80px;
+}
+
+/* Focus styles */
+:focus-visible {
+  outline: 2px solid var(--color-amber-glow);
+  outline-offset: 2px;
+}
+
+/* ============================================================
+   Typography Utility Classes
+   ============================================================ */
+.text-display-xl {
+  font-family: var(--font-display);
+  font-size: 4.5rem;
+  font-weight: 400;
+  line-height: 1.0;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.text-display-lg {
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  font-weight: 400;
+  line-height: 1.0;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.text-display-md {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.text-heading-lg {
+  font-family: var(--font-body);
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.text-heading-md {
+  font-family: var(--font-body);
+  font-size: 1.375rem;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.005em;
+}
+
+.text-heading-sm {
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.text-body-lg {
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.text-body-md {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.text-body-sm {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.005em;
+}
+
+.text-label {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* ============================================================
+   Animation Keyframes
+   ============================================================ */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes heroReveal {
+  from {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeUp var(--duration-slow) var(--ease-cinematic) both;
+}
+
+.animate-fade-in {
+  animation: fadeIn var(--duration-cinematic) var(--ease-cinematic) both;
+}
+
+.animate-hero-reveal {
+  animation: heroReveal var(--duration-cinematic) var(--ease-cinematic) both;
+}
+
+/* Stagger delays */
+.stagger-1 { animation-delay: 100ms; }
+.stagger-2 { animation-delay: 200ms; }
+.stagger-3 { animation-delay: 300ms; }
+.stagger-4 { animation-delay: 400ms; }
+.stagger-5 { animation-delay: 500ms; }
+.stagger-6 { animation-delay: 600ms; }
+
+/* ============================================================
+   Responsive Typography
+   ============================================================ */
+@media (max-width: 767px) {
+  .text-display-xl { font-size: 2.5rem; }
+  .text-display-lg { font-size: 2rem; }
+  .text-display-md { font-size: 1.75rem; }
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+  .text-display-xl { font-size: 3.5rem; }
+  .text-display-lg { font-size: 2.75rem; }
+}
+
+/* ============================================================
+   Reduced Motion
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}

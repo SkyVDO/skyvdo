@@ -1,0 +1,256 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "sundown": {
+    "color": {
+      "primitive": {
+        "midnight": { "$value": "#0A0E1A", "$type": "color", "$description": "Deepest background" },
+        "deep-navy": { "$value": "#111827", "$type": "color", "$description": "Elevated surface" },
+        "slate-blue": { "$value": "#1E293B", "$type": "color", "$description": "Secondary surface" },
+        "twilight-purple": { "$value": "#312E81", "$type": "color", "$description": "Gradient accent" },
+        "amber-glow": { "$value": "#F59E0B", "$type": "color", "$description": "Primary accent" },
+        "sunset-orange": { "$value": "#EA580C", "$type": "color", "$description": "Warm accent" },
+        "cinema-red": { "$value": "#DC2626", "$type": "color", "$description": "Bold promo accent" },
+        "starlight": { "$value": "#F1F5F9", "$type": "color", "$description": "Primary text on dark" },
+        "moonstone": { "$value": "#94A3B8", "$type": "color", "$description": "Secondary text" },
+        "dusk": { "$value": "#475569", "$type": "color", "$description": "Muted / disabled text" },
+        "screen-white": { "$value": "#FFFFFF", "$type": "color", "$description": "Pure white for projector screen elements" },
+        "success": { "$value": "#10B981", "$type": "color", "$description": "Positive states" },
+        "error": { "$value": "#EF4444", "$type": "color", "$description": "Error states" }
+      },
+      "semantic": {
+        "bg-primary": { "$value": "{sundown.color.primitive.midnight}", "$type": "color" },
+        "bg-surface": { "$value": "{sundown.color.primitive.deep-navy}", "$type": "color" },
+        "bg-surface-alt": { "$value": "{sundown.color.primitive.slate-blue}", "$type": "color" },
+        "bg-accent": { "$value": "{sundown.color.primitive.amber-glow}", "$type": "color" },
+        "bg-accent-warm": { "$value": "{sundown.color.primitive.sunset-orange}", "$type": "color" },
+        "bg-promo": { "$value": "{sundown.color.primitive.cinema-red}", "$type": "color" },
+        "text-primary": { "$value": "{sundown.color.primitive.starlight}", "$type": "color" },
+        "text-secondary": { "$value": "{sundown.color.primitive.moonstone}", "$type": "color" },
+        "text-muted": { "$value": "{sundown.color.primitive.dusk}", "$type": "color" },
+        "text-accent": { "$value": "{sundown.color.primitive.amber-glow}", "$type": "color" },
+        "text-on-accent": { "$value": "{sundown.color.primitive.midnight}", "$type": "color" },
+        "border-subtle": { "$value": "rgba(255, 255, 255, 0.06)", "$type": "color" },
+        "border-default": { "$value": "rgba(255, 255, 255, 0.10)", "$type": "color" },
+        "border-accent": { "$value": "{sundown.color.primitive.amber-glow}", "$type": "color" },
+        "focus-ring": { "$value": "{sundown.color.primitive.amber-glow}", "$type": "color" },
+        "state-success": { "$value": "{sundown.color.primitive.success}", "$type": "color" },
+        "state-error": { "$value": "{sundown.color.primitive.error}", "$type": "color" }
+      }
+    },
+    "typography": {
+      "font-family": {
+        "display": { "$value": "'Bebas Neue', Impact, sans-serif", "$type": "fontFamily" },
+        "body": { "$value": "'Outfit', system-ui, -apple-system, sans-serif", "$type": "fontFamily" },
+        "mono": { "$value": "'JetBrains Mono', 'Fira Code', monospace", "$type": "fontFamily" }
+      },
+      "font-size": {
+        "display-xl": { "$value": "4.5rem", "$type": "dimension", "$description": "72px — Hero headlines" },
+        "display-lg": { "$value": "3.5rem", "$type": "dimension", "$description": "56px — Section heroes" },
+        "display-md": { "$value": "2.5rem", "$type": "dimension", "$description": "40px — Card headlines" },
+        "heading-lg": { "$value": "1.75rem", "$type": "dimension", "$description": "28px — Section headings" },
+        "heading-md": { "$value": "1.375rem", "$type": "dimension", "$description": "22px — Subsection headings" },
+        "heading-sm": { "$value": "1.125rem", "$type": "dimension", "$description": "18px — Card titles" },
+        "body-lg": { "$value": "1.125rem", "$type": "dimension", "$description": "18px — Lead text" },
+        "body-md": { "$value": "1rem", "$type": "dimension", "$description": "16px — Default body" },
+        "body-sm": { "$value": "0.875rem", "$type": "dimension", "$description": "14px — Captions" },
+        "label": { "$value": "0.75rem", "$type": "dimension", "$description": "12px — Button labels, tags" },
+        "mono": { "$value": "1rem", "$type": "dimension", "$description": "16px — Pricing, specs" }
+      },
+      "font-weight": {
+        "light": { "$value": 300, "$type": "fontWeight" },
+        "regular": { "$value": 400, "$type": "fontWeight" },
+        "medium": { "$value": 500, "$type": "fontWeight" },
+        "semibold": { "$value": 600, "$type": "fontWeight" },
+        "bold": { "$value": 700, "$type": "fontWeight" }
+      },
+      "line-height": {
+        "display": { "$value": 1.0, "$type": "number" },
+        "display-relaxed": { "$value": 1.1, "$type": "number" },
+        "heading": { "$value": 1.2, "$type": "number" },
+        "heading-relaxed": { "$value": 1.35, "$type": "number" },
+        "body": { "$value": 1.6, "$type": "number" },
+        "body-tight": { "$value": 1.5, "$type": "number" },
+        "label": { "$value": 1.4, "$type": "number" }
+      },
+      "letter-spacing": {
+        "tight": { "$value": "-0.01em", "$type": "dimension" },
+        "normal": { "$value": "0", "$type": "dimension" },
+        "display": { "$value": "0.02em", "$type": "dimension" },
+        "wide": { "$value": "0.08em", "$type": "dimension" },
+        "caption": { "$value": "0.005em", "$type": "dimension" }
+      },
+      "composite": {
+        "display-xl": {
+          "$value": {
+            "fontFamily": "{sundown.typography.font-family.display}",
+            "fontSize": "{sundown.typography.font-size.display-xl}",
+            "fontWeight": "{sundown.typography.font-weight.regular}",
+            "lineHeight": "{sundown.typography.line-height.display}",
+            "letterSpacing": "{sundown.typography.letter-spacing.display}"
+          },
+          "$type": "typography"
+        },
+        "display-lg": {
+          "$value": {
+            "fontFamily": "{sundown.typography.font-family.display}",
+            "fontSize": "{sundown.typography.font-size.display-lg}",
+            "fontWeight": "{sundown.typography.font-weight.regular}",
+            "lineHeight": "{sundown.typography.line-height.display}",
+            "letterSpacing": "{sundown.typography.letter-spacing.display}"
+          },
+          "$type": "typography"
+        },
+        "display-md": {
+          "$value": {
+            "fontFamily": "{sundown.typography.font-family.display}",
+            "fontSize": "{sundown.typography.font-size.display-md}",
+            "fontWeight": "{sundown.typography.font-weight.regular}",
+            "lineHeight": "{sundown.typography.line-height.display-relaxed}",
+            "letterSpacing": "{sundown.typography.letter-spacing.display}"
+          },
+          "$type": "typography"
+        },
+        "heading-lg": {
+          "$value": {
+            "fontFamily": "{sundown.typography.font-family.body}",
+            "fontSize": "{sundown.typography.font-size.heading-lg}",
+            "fontWeight": "{sundown.typography.font-weight.bold}",
+            "lineHeight": "{sundown.typography.line-height.heading}",
+            "letterSpacing": "{sundown.typography.letter-spacing.tight}"
+          },
+          "$type": "typography"
+        },
+        "heading-md": {
+          "$value": {
+            "fontFamily": "{sundown.typography.font-family.body}",
+            "fontSize": "{sundown.typography.font-size.heading-md}",
+            "fontWeight": "{sundown.typography.font-weight.semibold}",
+            "lineHeight": "{sundown.typography.line-height.heading}",
+            "letterSpacing": "{sundown.typography.letter-spacing.tight}"
+          },
+          "$type": "typography"
+        },
+        "body-lg": {
+          "$value": {
+            "fontFamily": "{sundown.typography.font-family.body}",
+            "fontSize": "{sundown.typography.font-size.body-lg}",
+            "fontWeight": "{sundown.typography.font-weight.regular}",
+            "lineHeight": "{sundown.typography.line-height.body}",
+            "letterSpacing": "{sundown.typography.letter-spacing.normal}"
+          },
+          "$type": "typography"
+        },
+        "body-md": {
+          "$value": {
+            "fontFamily": "{sundown.typography.font-family.body}",
+            "fontSize": "{sundown.typography.font-size.body-md}",
+            "fontWeight": "{sundown.typography.font-weight.regular}",
+            "lineHeight": "{sundown.typography.line-height.body}",
+            "letterSpacing": "{sundown.typography.letter-spacing.normal}"
+          },
+          "$type": "typography"
+        },
+        "label": {
+          "$value": {
+            "fontFamily": "{sundown.typography.font-family.body}",
+            "fontSize": "{sundown.typography.font-size.label}",
+            "fontWeight": "{sundown.typography.font-weight.semibold}",
+            "lineHeight": "{sundown.typography.line-height.label}",
+            "letterSpacing": "{sundown.typography.letter-spacing.wide}"
+          },
+          "$type": "typography"
+        },
+        "price": {
+          "$value": {
+            "fontFamily": "{sundown.typography.font-family.mono}",
+            "fontSize": "{sundown.typography.font-size.mono}",
+            "fontWeight": "{sundown.typography.font-weight.regular}",
+            "lineHeight": "{sundown.typography.line-height.body-tight}",
+            "letterSpacing": "{sundown.typography.letter-spacing.normal}"
+          },
+          "$type": "typography"
+        }
+      }
+    },
+    "spacing": {
+      "1": { "$value": "4px", "$type": "dimension" },
+      "2": { "$value": "8px", "$type": "dimension" },
+      "3": { "$value": "12px", "$type": "dimension" },
+      "4": { "$value": "16px", "$type": "dimension" },
+      "5": { "$value": "20px", "$type": "dimension" },
+      "6": { "$value": "24px", "$type": "dimension" },
+      "8": { "$value": "32px", "$type": "dimension" },
+      "10": { "$value": "40px", "$type": "dimension" },
+      "12": { "$value": "48px", "$type": "dimension" },
+      "16": { "$value": "64px", "$type": "dimension" },
+      "20": { "$value": "80px", "$type": "dimension" },
+      "24": { "$value": "96px", "$type": "dimension" }
+    },
+    "border-radius": {
+      "none": { "$value": "0px", "$type": "dimension" },
+      "sm": { "$value": "4px", "$type": "dimension" },
+      "md": { "$value": "8px", "$type": "dimension" },
+      "lg": { "$value": "12px", "$type": "dimension" },
+      "xl": { "$value": "16px", "$type": "dimension" },
+      "full": { "$value": "9999px", "$type": "dimension" }
+    },
+    "shadow": {
+      "raised": { "$value": "0 1px 3px rgba(0, 0, 0, 0.4)", "$type": "shadow" },
+      "elevated": { "$value": "0 4px 12px rgba(0, 0, 0, 0.5)", "$type": "shadow" },
+      "glow-amber": { "$value": "0 0 30px rgba(245, 158, 11, 0.2)", "$type": "shadow" },
+      "glow-amber-strong": { "$value": "0 0 50px rgba(245, 158, 11, 0.35)", "$type": "shadow" },
+      "card-hover": { "$value": "0 8px 24px rgba(0, 0, 0, 0.6)", "$type": "shadow" }
+    },
+    "motion": {
+      "duration": {
+        "fast": { "$value": "150ms", "$type": "duration" },
+        "base": { "$value": "250ms", "$type": "duration" },
+        "slow": { "$value": "400ms", "$type": "duration" },
+        "cinematic": { "$value": "800ms", "$type": "duration" }
+      },
+      "easing": {
+        "default": { "$value": "ease-in-out", "$type": "cubicBezier" },
+        "out": { "$value": "ease-out", "$type": "cubicBezier" },
+        "cinematic": { "$value": "cubic-bezier(0.25, 0.1, 0.25, 1)", "$type": "cubicBezier" },
+        "snap": { "$value": "cubic-bezier(0.2, 0, 0, 1)", "$type": "cubicBezier" }
+      }
+    },
+    "gradient": {
+      "night-sky": { "$value": "linear-gradient(180deg, #0A0E1A 0%, #1E293B 50%, #312E81 100%)", "$type": "gradient" },
+      "amber-horizon": { "$value": "linear-gradient(135deg, #F59E0B 0%, #EA580C 100%)", "$type": "gradient" },
+      "twilight-fade": { "$value": "linear-gradient(180deg, #312E81 0%, #0A0E1A 100%)", "$type": "gradient" },
+      "screen-glow": { "$value": "radial-gradient(ellipse at center, rgba(245, 158, 11, 0.15) 0%, transparent 70%)", "$type": "gradient" },
+      "hero-overlay": { "$value": "linear-gradient(to right, rgba(10, 14, 26, 0.85) 0%, rgba(10, 14, 26, 0.4) 60%, transparent 100%)", "$type": "gradient" },
+      "card-overlay": { "$value": "linear-gradient(180deg, transparent 40%, rgba(10, 14, 26, 0.9) 100%)", "$type": "gradient" }
+    },
+    "breakpoint": {
+      "mobile": { "$value": "0px", "$type": "dimension" },
+      "tablet": { "$value": "768px", "$type": "dimension" },
+      "desktop": { "$value": "1280px", "$type": "dimension" },
+      "wide": { "$value": "1536px", "$type": "dimension" }
+    },
+    "grid": {
+      "desktop": {
+        "columns": { "$value": 12, "$type": "number" },
+        "gutter": { "$value": "24px", "$type": "dimension" },
+        "max-width": { "$value": "1440px", "$type": "dimension" }
+      },
+      "tablet": {
+        "columns": { "$value": 8, "$type": "number" },
+        "gutter": { "$value": "20px", "$type": "dimension" }
+      },
+      "mobile": {
+        "columns": { "$value": 4, "$type": "number" },
+        "gutter": { "$value": "16px", "$type": "dimension" }
+      }
+    },
+    "z-index": {
+      "base": { "$value": 0, "$type": "number" },
+      "dropdown": { "$value": 10, "$type": "number" },
+      "sticky": { "$value": 20, "$type": "number" },
+      "overlay": { "$value": 30, "$type": "number" },
+      "modal": { "$value": 40, "$type": "number" },
+      "toast": { "$value": 50, "$type": "number" }
+    }
+  }
+}
