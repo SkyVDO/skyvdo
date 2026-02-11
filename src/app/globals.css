@@ -5,19 +5,19 @@
    ============================================================ */
 @theme inline {
   /* Colors */
-  --color-midnight: #0A0E1A;
-  --color-deep-navy: #111827;
-  --color-slate-blue: #1E293B;
-  --color-twilight: #312E81;
-  --color-amber-glow: #F59E0B;
-  --color-sunset-orange: #EA580C;
-  --color-cinema-red: #DC2626;
-  --color-starlight: #F1F5F9;
-  --color-moonstone: #94A3B8;
-  --color-dusk: #475569;
-  --color-screen-white: #FFFFFF;
-  --color-success: #10B981;
-  --color-error: #EF4444;
+  --color-midnight: #FDF8F0;
+  --color-deep-navy: #FFFFFF;
+  --color-slate-blue: #F5EDE0;
+  --color-twilight: #A78BFA;
+  --color-amber-glow: #B45309;
+  --color-sunset-orange: #C2410C;
+  --color-cinema-red: #B91C1C;
+  --color-starlight: #1C1917;
+  --color-moonstone: #57534E;
+  --color-dusk: #78716C;
+  --color-screen-white: #0A0E1A;
+  --color-success: #047857;
+  --color-error: #B91C1C;
 
   /* Font families */
   --font-display: var(--font-bebas-neue), Impact, sans-serif;
@@ -25,11 +25,11 @@
   --font-mono: var(--font-jetbrains-mono), "Fira Code", monospace;
 
   /* Shadows */
-  --shadow-raised: 0 1px 3px rgba(0, 0, 0, 0.4);
-  --shadow-elevated: 0 4px 12px rgba(0, 0, 0, 0.5);
-  --shadow-glow-amber: 0 0 30px rgba(245, 158, 11, 0.2);
-  --shadow-glow-amber-strong: 0 0 50px rgba(245, 158, 11, 0.35);
-  --shadow-card-hover: 0 8px 24px rgba(0, 0, 0, 0.6);
+  --shadow-raised: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-elevated: 0 4px 12px rgba(0, 0, 0, 0.10);
+  --shadow-glow-amber: 0 0 30px rgba(180, 83, 9, 0.12);
+  --shadow-glow-amber-strong: 0 0 50px rgba(180, 83, 9, 0.20);
+  --shadow-card-hover: 0 8px 24px rgba(0, 0, 0, 0.12);
 
   /* Easings */
   --ease-cinematic: cubic-bezier(0.25, 0.1, 0.25, 1);
@@ -41,21 +41,21 @@
    ============================================================ */
 :root {
   /* Semantic backgrounds */
-  --bg-primary: #0A0E1A;
-  --bg-surface: #111827;
-  --bg-surface-alt: #1E293B;
+  --bg-primary: #FDF8F0;
+  --bg-surface: #FFFFFF;
+  --bg-surface-alt: #F5EDE0;
 
   /* Borders */
-  --border-subtle: rgba(255, 255, 255, 0.06);
-  --border-default: rgba(255, 255, 255, 0.10);
+  --border-subtle: rgba(0, 0, 0, 0.06);
+  --border-default: rgba(0, 0, 0, 0.10);
 
   /* Gradients */
-  --gradient-night-sky: linear-gradient(180deg, #0A0E1A 0%, #1E293B 50%, #312E81 100%);
-  --gradient-amber-horizon: linear-gradient(135deg, #F59E0B 0%, #EA580C 100%);
-  --gradient-twilight-fade: linear-gradient(180deg, #312E81 0%, #0A0E1A 100%);
-  --gradient-screen-glow: radial-gradient(ellipse at center, rgba(245, 158, 11, 0.15) 0%, transparent 70%);
-  --gradient-hero-overlay: linear-gradient(to right, rgba(10, 14, 26, 0.85) 0%, rgba(10, 14, 26, 0.4) 60%, transparent 100%);
-  --gradient-card-overlay: linear-gradient(180deg, transparent 40%, rgba(10, 14, 26, 0.9) 100%);
+  --gradient-night-sky: linear-gradient(180deg, #FDF8F0 0%, #F5EDE0 50%, #DDD6FE 100%);
+  --gradient-amber-horizon: linear-gradient(135deg, #B45309 0%, #C2410C 100%);
+  --gradient-twilight-fade: linear-gradient(180deg, #A78BFA 0%, #FDF8F0 100%);
+  --gradient-screen-glow: radial-gradient(ellipse at center, rgba(180, 83, 9, 0.08) 0%, transparent 70%);
+  --gradient-hero-overlay: linear-gradient(to right, rgba(253, 248, 240, 0.92) 0%, rgba(253, 248, 240, 0.6) 60%, transparent 100%);
+  --gradient-card-overlay: linear-gradient(180deg, transparent 40%, rgba(253, 248, 240, 0.92) 100%);
 
   /* Motion */
   --duration-fast: 150ms;

@@ -29,7 +29,7 @@ export default function WhoItsForSection() {
                     className="absolute inset-0"
                     style={{
                       background:
-                        "linear-gradient(180deg, transparent 40%, rgba(10,14,26,0.9) 100%)",
+                        "linear-gradient(180deg, transparent 40%, rgba(253,248,240,0.92) 100%)",
                     }}
                   />
 

@@ -10,14 +10,14 @@
 SunDown Entertainment delivers premium outdoor cinema experiences — inflatable screens, 4K projectors, and immersive sound under the open sky. The brand lives at the intersection of **cinematic wonder** and **effortless luxury**. Every visual decision should feel like the moment the projector flickers on against a twilight sky.
 
 ### Design Philosophy
-Adapted from the reference grid-based layout (ref1.webp), the system uses **asymmetric modular grids**, **bold uppercase typography**, and **card-based content blocks** — but recast in a nocturnal palette. Where the reference uses white + red accents on light backgrounds, SunDown inverts this into **deep indigo surfaces** with **warm amber highlights**, evoking starlit nights and golden projector glow.
+Adapted from the reference grid-based layout (ref1.webp), the system uses **asymmetric modular grids**, **bold uppercase typography**, and **card-based content blocks** — recast in a warm, inviting light palette. The design embraces **warm ivory surfaces** with **deep temple-gold highlights**, evoking the golden warmth of Indian celebration and cinematic splendor — like premium wedding stationery and handloom textures.
 
 ### Design Principles
 
 | Principle | Description |
 |---|---|
 | **Cinematic** | Every layout should feel like a widescreen frame. Use dramatic scale, generous negative space, and atmospheric imagery. |
-| **Nocturnal** | Dark surfaces dominate. Light is used intentionally — amber warmth, not clinical white. |
+| **Warm & Inviting** | Light surfaces with warmth. Color is used intentionally — deep gold warmth, not clinical white. |
 | **Bold & Clear** | Uppercase headings, strong typographic hierarchy, no visual noise. The message hits immediately. |
 | **Grid-Driven** | Asymmetric modular grids create visual interest while maintaining order. Cards, not chaos. |
 | **Premium Approachable** | High-end feel without being intimidating. This is a celebration, not a gallery. |
@@ -30,39 +30,39 @@ Adapted from the reference grid-based layout (ref1.webp), the system uses **asym
 
 | Role | Name | Hex | Usage |
 |---|---|---|---|
-| **Background** | Midnight | `#0A0E1A` | Primary page background, dark surfaces |
-| **Surface** | Deep Navy | `#111827` | Card backgrounds, elevated surfaces |
-| **Surface Alt** | Slate Blue | `#1E293B` | Secondary cards, hover states, dividers |
-| **Accent Primary** | Amber Glow | `#F59E0B` | CTAs, highlights, active states, star motifs |
-| **Accent Warm** | Sunset Orange | `#EA580C` | Secondary accent, urgency, pricing highlights |
-| **Text Primary** | Starlight | `#F1F5F9` | Headings, primary body text on dark |
-| **Text Secondary** | Moonstone | `#94A3B8` | Captions, metadata, supporting text |
-| **Text Muted** | Dusk | `#475569` | Disabled states, placeholder text |
+| **Background** | Warm Ivory | `#FDF8F0` | Primary page background, light surfaces |
+| **Surface** | Pure White | `#FFFFFF` | Card backgrounds, elevated surfaces |
+| **Surface Alt** | Warm Linen | `#F5EDE0` | Secondary cards, hover states, dividers |
+| **Accent Primary** | Temple Gold | `#B45309` | CTAs, highlights, active states, star motifs |
+| **Accent Warm** | Rich Terracotta | `#C2410C` | Secondary accent, urgency, pricing highlights |
+| **Text Primary** | Warm Charcoal | `#1C1917` | Headings, primary body text on light |
+| **Text Secondary** | Warm Stone | `#57534E` | Captions, metadata, supporting text |
+| **Text Muted** | Sandstone | `#78716C` | Disabled states, placeholder text |
 
 ### Extended Palette
 
 | Name | Hex | Usage |
 |---|---|---|
-| Twilight Purple | `#312E81` | Gradient accents, decorative backgrounds |
-| Screen White | `#FFFFFF` | Projector screen imagery, high-contrast elements |
-| Success Green | `#10B981` | Booking confirmed, availability indicators |
-| Error Red | `#EF4444` | Form errors, unavailable dates |
-| Cinema Red | `#DC2626` | Bold accent blocks (inspired by ref1 red cards) |
+| Soft Lavender | `#A78BFA` | Gradient accents, decorative backgrounds |
+| Deep Dark | `#0A0E1A` | Hover overlay tints, dark contrast elements |
+| Deep Emerald | `#047857` | Booking confirmed, availability indicators |
+| Deep Red | `#B91C1C` | Form errors, unavailable dates |
+| Deep Crimson | `#B91C1C` | Bold accent blocks (inspired by ref1 red cards) |
 
 ### Gradient Definitions
 
 ```
-Night Sky:        linear-gradient(180deg, #0A0E1A 0%, #1E293B 50%, #312E81 100%)
-Amber Horizon:    linear-gradient(135deg, #F59E0B 0%, #EA580C 100%)
-Twilight Fade:    linear-gradient(180deg, #312E81 0%, #0A0E1A 100%)
-Screen Glow:      radial-gradient(ellipse at center, rgba(245,158,11,0.15) 0%, transparent 70%)
+Day Sky:          linear-gradient(180deg, #FDF8F0 0%, #F5EDE0 50%, #DDD6FE 100%)
+Gold Horizon:     linear-gradient(135deg, #B45309 0%, #C2410C 100%)
+Lavender Fade:    linear-gradient(180deg, #A78BFA 0%, #FDF8F0 100%)
+Warm Glow:        radial-gradient(ellipse at center, rgba(180,83,9,0.08) 0%, transparent 70%)
 ```
 
 ### Color Usage Rules
-- **Never** place amber text on amber backgrounds. Amber is for interactive elements and highlights only.
-- **Dark surfaces** use the 3-tier depth system: Midnight → Deep Navy → Slate Blue (back to front).
-- **Light-on-dark** contrast must meet WCAG AA (4.5:1 for body text, 3:1 for large text).
-- The **Cinema Red** (`#DC2626`) is used sparingly — only for bold promotional blocks (mirroring ref1's red "GADGETS & MORE" card pattern).
+- **Never** place gold text on gold backgrounds. Gold is for interactive elements and highlights only.
+- **Light surfaces** use the 3-tier depth system: Warm Ivory → Pure White → Warm Linen (back to front).
+- **Dark-on-light** contrast must meet WCAG AA (4.5:1 for body text, 3:1 for large text).
+- The **Deep Crimson** (`#B91C1C`) is used sparingly — only for bold promotional blocks (mirroring ref1's red "GADGETS & MORE" card pattern).
 
 ---
 
@@ -188,14 +188,14 @@ Inspired by ref1's layout where the hero image spans ~60% left and product cards
 
 ## 6. Elevation & Depth
 
-Dark interfaces need careful layering. Use background color tiers + subtle borders instead of heavy shadows:
+Light interfaces need careful layering. Use background color tiers + subtle borders with soft shadows:
 
 | Level | Background | Border | Shadow | Usage |
 |---|---|---|---|---|
-| **Base** | Midnight `#0A0E1A` | none | none | Page background |
-| **Raised** | Deep Navy `#111827` | `1px solid rgba(255,255,255,0.06)` | `0 1px 3px rgba(0,0,0,0.4)` | Cards, panels |
-| **Elevated** | Slate Blue `#1E293B` | `1px solid rgba(255,255,255,0.08)` | `0 4px 12px rgba(0,0,0,0.5)` | Modals, dropdowns, popovers |
-| **Glow** | — | — | `0 0 30px rgba(245,158,11,0.2)` | Active/focused interactive elements |
+| **Base** | Warm Ivory `#FDF8F0` | none | none | Page background |
+| **Raised** | Pure White `#FFFFFF` | `1px solid rgba(0,0,0,0.06)` | `0 1px 3px rgba(0,0,0,0.08)` | Cards, panels |
+| **Elevated** | Warm Linen `#F5EDE0` | `1px solid rgba(0,0,0,0.10)` | `0 4px 12px rgba(0,0,0,0.10)` | Modals, dropdowns, popovers |
+| **Glow** | — | — | `0 0 30px rgba(180,83,9,0.12)` | Active/focused interactive elements |
 
 ---
 
@@ -304,18 +304,21 @@ The reference heavily uses `→` arrows as standalone CTAs and within buttons. A
 | Focus indicators | 2px amber outline with 2px offset |
 | Touch targets | Minimum 44x44px |
 | Reduced motion | Respect `prefers-reduced-motion` — disable all transforms, use opacity-only transitions |
-| Dark mode | Default. Light mode not required for v1 but token system supports it. |
+| Light mode | Default. The warm ivory palette provides excellent readability while feeling premium and inviting. |
 | Language | English primary, Tamil secondary (future) |
 
 ### Contrast Verification
 
 | Combination | Ratio | Pass |
 |---|---|---|
-| Starlight (#F1F5F9) on Midnight (#0A0E1A) | 16.4:1 | AAA |
-| Moonstone (#94A3B8) on Midnight (#0A0E1A) | 6.8:1 | AA |
-| Amber Glow (#F59E0B) on Midnight (#0A0E1A) | 9.1:1 | AAA |
-| Amber Glow (#F59E0B) on Deep Navy (#111827) | 7.9:1 | AA |
-| Midnight (#0A0E1A) on Amber Glow (#F59E0B) | 9.1:1 | AAA |
+| Warm Charcoal (#1C1917) on Warm Ivory (#FDF8F0) | 14.1:1 | AAA |
+| Warm Charcoal (#1C1917) on Pure White (#FFFFFF) | 15.0:1 | AAA |
+| Warm Stone (#57534E) on Warm Ivory (#FDF8F0) | 7.3:1 | AAA |
+| Sandstone (#78716C) on Warm Ivory (#FDF8F0) | 4.5:1 | AA |
+| Temple Gold (#B45309) on Warm Ivory (#FDF8F0) | 4.8:1 | AA |
+| Warm Ivory (#FDF8F0) on Temple Gold (#B45309) | 4.8:1 | AA |
+| Deep Emerald (#047857) on Warm Ivory (#FDF8F0) | 5.2:1 | AA |
+| Deep Red (#B91C1C) on Warm Ivory (#FDF8F0) | 6.1:1 | AA |
 
 ---
 

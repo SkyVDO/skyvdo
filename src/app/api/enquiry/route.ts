@@ -26,38 +26,38 @@ export async function POST(request: Request) {
     }
 
     const emailHtml = `
-      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; background: #111827; color: #F1F5F9; padding: 32px; border-radius: 8px;">
-        <h1 style="color: #F59E0B; font-size: 24px; margin-bottom: 24px;">New Enquiry from SunDown Website</h1>
+      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; background: #FFFFFF; color: #1C1917; padding: 32px; border-radius: 8px;">
+        <h1 style="color: #B45309; font-size: 24px; margin-bottom: 24px;">New Enquiry from SunDown Website</h1>
 
         <table style="width: 100%; border-collapse: collapse;">
           <tr>
-            <td style="padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.1); color: #94A3B8; width: 140px;">Name</td>
-            <td style="padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.1); color: #F1F5F9; font-weight: 600;">${escapeHtml(name)}</td>
+            <td style="padding: 12px 0; border-bottom: 1px solid rgba(0,0,0,0.1); color: #57534E; width: 140px;">Name</td>
+            <td style="padding: 12px 0; border-bottom: 1px solid rgba(0,0,0,0.1); color: #1C1917; font-weight: 600;">${escapeHtml(name)}</td>
           </tr>
           <tr>
-            <td style="padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.1); color: #94A3B8;">Phone</td>
-            <td style="padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.1); color: #F1F5F9; font-weight: 600;">${escapeHtml(phone)}</td>
+            <td style="padding: 12px 0; border-bottom: 1px solid rgba(0,0,0,0.1); color: #57534E;">Phone</td>
+            <td style="padding: 12px 0; border-bottom: 1px solid rgba(0,0,0,0.1); color: #1C1917; font-weight: 600;">${escapeHtml(phone)}</td>
           </tr>
           <tr>
-            <td style="padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.1); color: #94A3B8;">Event Type</td>
-            <td style="padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.1); color: #F59E0B; font-weight: 600;">${escapeHtml(eventType)}</td>
+            <td style="padding: 12px 0; border-bottom: 1px solid rgba(0,0,0,0.1); color: #57534E;">Event Type</td>
+            <td style="padding: 12px 0; border-bottom: 1px solid rgba(0,0,0,0.1); color: #B45309; font-weight: 600;">${escapeHtml(eventType)}</td>
           </tr>
           <tr>
-            <td style="padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.1); color: #94A3B8; vertical-align: top;">Description</td>
-            <td style="padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.1); color: #F1F5F9;">${escapeHtml(description)}</td>
+            <td style="padding: 12px 0; border-bottom: 1px solid rgba(0,0,0,0.1); color: #57534E; vertical-align: top;">Description</td>
+            <td style="padding: 12px 0; border-bottom: 1px solid rgba(0,0,0,0.1); color: #1C1917;">${escapeHtml(description)}</td>
           </tr>
           ${
             notes
               ? `<tr>
-            <td style="padding: 12px 0; color: #94A3B8; vertical-align: top;">Notes</td>
-            <td style="padding: 12px 0; color: #F1F5F9;">${escapeHtml(notes)}</td>
+            <td style="padding: 12px 0; color: #57534E; vertical-align: top;">Notes</td>
+            <td style="padding: 12px 0; color: #1C1917;">${escapeHtml(notes)}</td>
           </tr>`
               : ""
           }
         </table>
 
-        <div style="margin-top: 24px; padding: 16px; background: rgba(245,158,11,0.1); border-left: 3px solid #F59E0B; border-radius: 4px;">
-          <p style="margin: 0; color: #94A3B8; font-size: 14px;">Reply to this lead quickly — call <strong style="color: #F1F5F9;">${escapeHtml(phone)}</strong> or follow up on WhatsApp.</p>
+        <div style="margin-top: 24px; padding: 16px; background: rgba(180,83,9,0.06); border-left: 3px solid #B45309; border-radius: 4px;">
+          <p style="margin: 0; color: #57534E; font-size: 14px;">Reply to this lead quickly — call <strong style="color: #1C1917;">${escapeHtml(phone)}</strong> or follow up on WhatsApp.</p>
         </div>
       </div>
     `;
