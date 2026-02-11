@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { HERO, SECTION_IDS } from "@/lib/constants";
+import IplShowcaseCarousel from "./IplShowcaseCarousel";
 
 export default function HeroSection() {
   return (
@@ -23,24 +24,28 @@ export default function HeroSection() {
 
       {/* Content */}
       <div className="relative z-10 mx-auto w-full max-w-[var(--grid-max-width)] px-4 py-20 md:px-6 md:py-24 lg:py-32">
+        <div className="mb-8 max-w-[var(--grid-content-width)] animate-fade-up stagger-1 md:mb-10 lg:mb-12">
+          <IplShowcaseCarousel />
+        </div>
+
         <div className="max-w-2xl">
           {/* Overline */}
-          <p className="text-label text-amber-glow animate-fade-up stagger-1 mb-4">
+          <p className="text-label text-amber-glow animate-fade-up stagger-2 mb-4">
             {HERO.overline}
           </p>
 
           {/* Headline */}
-          <h1 className="text-display-xl text-starlight animate-fade-up stagger-2 mb-6 whitespace-pre-line">
+          <h1 className="text-display-xl text-starlight animate-fade-up stagger-3 mb-6 whitespace-pre-line">
             {HERO.headline}
           </h1>
 
           {/* Subtext */}
-          <p className="text-body-lg text-moonstone animate-fade-up stagger-3 mb-10 max-w-[480px]">
+          <p className="text-body-lg text-moonstone animate-fade-up stagger-4 mb-10 max-w-[560px]">
             {HERO.subtext}
           </p>
 
           {/* CTAs */}
-          <div className="animate-fade-up stagger-4 flex flex-wrap gap-4">
+          <div className="animate-fade-up stagger-5 flex flex-wrap gap-4">
             {/* Primary CTA */}
             <a
               href={`#${SECTION_IDS.enquiry}`}

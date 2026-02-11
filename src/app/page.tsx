@@ -1,6 +1,5 @@
 import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
-import WhatWeDoSection from "@/components/WhatWeDoSection";
 import WhoItsForSection from "@/components/WhoItsForSection";
 import PackagesSection from "@/components/PackagesSection";
 import VisualProofSection from "@/components/VisualProofSection";
@@ -16,7 +15,6 @@ export default function Home() {
       <Navigation />
       <main>
         <HeroSection />
-        <WhatWeDoSection />
         <WhoItsForSection />
         <PackagesSection />
         <VisualProofSection />

@@ -16,7 +16,7 @@ export const SECTION_IDS = {
 
 // Nav items
 export const NAV_ITEMS = [
-  { label: "What We Do", href: `#${SECTION_IDS.whatWeDo}` },
+  { label: "Who It's For", href: `#${SECTION_IDS.whoItsFor}` },
   { label: "Packages", href: `#${SECTION_IDS.packages}` },
   { label: "How It Works", href: `#${SECTION_IDS.howItWorks}` },
 ] as const;
@@ -34,10 +34,10 @@ export const CONTACT = {
 
 // Hero content
 export const HERO = {
-  overline: "PREMIUM OUTDOOR CINEMA",
+  overline: "PREMIUM OUTDOOR CINEMA & LIVE IPL NIGHTS",
   headline: "YOUR BACKYARD.\nOUR SCREEN.\nPURE MAGIC.",
   subtext:
-    "We bring the cinema experience to your doorstep — premium 4K projection, cinematic sound, and inflatable screens under the open sky.",
+    "From movie nights to high-energy IPL screenings, we bring premium 4K projection, cinematic sound, and inflatable screens right to your doorstep.",
   primaryCta: "Enquire Now",
   secondaryCta1: "View Packages",
   secondaryCta2: "See How It Works",
@@ -106,42 +106,44 @@ export const AUDIENCES = [
 // Package cards (NO prices per brief)
 export const PACKAGES = [
   {
-    name: "Backyard Movie Night",
-    description: "Perfect for intimate gatherings of family and close friends under the stars.",
-    features: [
-      "12ft Inflatable Screen",
-      "HD Projector",
-      "2-Speaker Sound System",
-      "Complete Setup & Takedown",
-    ],
-    highlighted: false,
-    badge: null,
-  },
-  {
-    name: "Community Screening",
+    name: "High-Octane IPL Night",
     description:
-      "The crowd favourite — ideal for apartment complexes, clubs, and neighbourhood events.",
+      "Bring stadium energy home with a match-day setup built for loud cheers, big moments, and unforgettable cricket nights.",
     features: [
-      "20ft Inflatable Screen",
+      "16ft Inflatable Screen",
       "4K Projector",
-      "4-Speaker Surround Sound",
+      "High-Output Match Audio Setup",
       "Complete Setup & Takedown",
-      "Seating Arrangement Support",
+      "Ambient Match-Night Lighting",
     ],
     highlighted: true,
     badge: "MOST POPULAR",
   },
   {
-    name: "Corporate Experience",
+    name: "Kids Birthday Party Cinema",
     description:
-      "Premium cinema for team outings, client events, and brand activations that leave a lasting impression.",
+      "A joyful, family-friendly movie setup for birthdays with safe, comfortable viewing and a wow factor kids love.",
     features: [
-      "Up to 40ft Screen",
-      "4K Laser Projector",
-      "Professional Sound System",
+      "12ft Inflatable Screen",
+      "HD Projector",
+      "Balanced Family Sound System",
       "Complete Setup & Takedown",
-      "Custom Branding Options",
-      "Dedicated Event Coordinator",
+      "Flexible Viewing Area Arrangement",
+    ],
+    highlighted: false,
+    badge: null,
+  },
+  {
+    name: "Choose Your Own Experience",
+    description:
+      "Build a fully custom screening for your space, crowd size, and occasion, from intimate gatherings to large-format events.",
+    features: [
+      "Custom Screen Size (12ft to 40ft)",
+      "Projector Choice (HD / 4K / Laser)",
+      "Sound Setup Tuned to Venue Size",
+      "Complete Setup & Takedown",
+      "Optional Add-Ons & Theme Styling",
+      "Dedicated Planning Support",
     ],
     highlighted: false,
     badge: null,
@@ -179,6 +181,25 @@ export const GALLERY_IMAGES = [
     src: "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=400&h=300&fit=crop",
     alt: "[Placeholder] Corporate outdoor screening event",
     span: "col-span-1 row-span-1",
+  },
+] as const;
+
+// IPL showcase carousel images
+export const IPL_CAROUSEL_IMAGES = [
+  {
+    src: "/ipl/ipl-day-family.jpeg",
+    alt: "Family and friends enjoying a daytime IPL screening in a backyard setup.",
+    title: "DAYTIME BACKYARD IPL WATCH PARTY",
+  },
+  {
+    src: "/ipl/ipl-night-family.jpeg",
+    alt: "Family watching an IPL match on an outdoor inflatable screen near a pool at night.",
+    title: "NIGHT POOLSIDE IPL CINEMA EXPERIENCE",
+  },
+  {
+    src: "/ipl/ipl-multiple-scenarios.jpeg",
+    alt: "Multiple IPL screening setups across rooftops, lawns, and community spaces at dusk.",
+    title: "COMMUNITY IPL SCREENINGS ACROSS EVERY SETTING",
   },
 ] as const;
 
@@ -220,7 +241,7 @@ export const EVENT_TYPES = [
 // Footer links
 export const FOOTER_LINKS = {
   services: [
-    { label: "Outdoor Cinema", href: `#${SECTION_IDS.whatWeDo}` },
+    { label: "Outdoor Cinema", href: `#${SECTION_IDS.packages}` },
     { label: "Corporate Events", href: `#${SECTION_IDS.packages}` },
     { label: "Community Screenings", href: `#${SECTION_IDS.packages}` },
     { label: "Sports Screenings", href: `#${SECTION_IDS.packages}` },
