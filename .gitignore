@@ -37,6 +37,12 @@ yarn-error.log*
 # business documents
 /docs/BusDocs/
 
+# reference files
+/refs/
+
+# plans
+/plans/
+
 # vercel
 .vercel
 

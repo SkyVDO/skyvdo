@@ -23,9 +23,9 @@ export const NAV_ITEMS = [
 
 // Contact info
 export const CONTACT = {
-  whatsappNumber: "919812345678",
-  whatsappLink: "https://wa.me/919812345678",
-  phone: "+91 98123 45678",
+  whatsappNumber: "919566071168",
+  whatsappLink: "https://wa.me/919566071168",
+  phone: "+91 95660 71168",
   email: "hello@sundownentertainment.in",
   instagram: "https://instagram.com/sundownentertainment",
   youtube: "https://youtube.com/@sundownentertainment",
