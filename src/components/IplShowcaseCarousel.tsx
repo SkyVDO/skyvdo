@@ -51,7 +51,7 @@ export default function IplShowcaseCarousel() {
 
   return (
     <div
-      className="relative overflow-hidden rounded-lg border border-[var(--border-subtle)] bg-deep-navy shadow-raised"
+      className="relative overflow-hidden bg-[#0a0a0a]"
       role="region"
       aria-roledescription="carousel"
       aria-label="IPL outdoor screening highlights"
@@ -75,10 +75,10 @@ export default function IplShowcaseCarousel() {
               className="h-full w-full object-cover"
               loading={index === 0 ? "eager" : "lazy"}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-screen-white/55 via-screen-white/15 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
             <div className="absolute inset-x-0 bottom-0 p-4 md:p-6">
               <p className="mb-2 text-label text-amber-glow">LIVE IPL MATCH SCREENINGS</p>
-              <p className="font-display text-[1.5rem] leading-[1.05] tracking-[0.02em] text-midnight uppercase md:text-[2rem]">
+              <p className="font-display text-[1.5rem] leading-[1.05] tracking-[0.02em] text-white uppercase md:text-[2rem]">
                 {slide.title}
               </p>
             </div>
@@ -91,7 +91,7 @@ export default function IplShowcaseCarousel() {
               type="button"
               onClick={goToPrevious}
               aria-label="Show previous IPL image"
-              className="absolute left-3 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-[var(--border-subtle)] bg-midnight/90 text-starlight transition-colors duration-[var(--duration-fast)] hover:bg-midnight"
+              className="absolute left-3 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/10 bg-white/10 text-white backdrop-blur-sm transition-colors duration-[var(--duration-fast)] hover:bg-white/20"
             >
               <ChevronLeft size={18} />
             </button>
@@ -99,7 +99,7 @@ export default function IplShowcaseCarousel() {
               type="button"
               onClick={goToNext}
               aria-label="Show next IPL image"
-              className="absolute right-3 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-[var(--border-subtle)] bg-midnight/90 text-starlight transition-colors duration-[var(--duration-fast)] hover:bg-midnight"
+              className="absolute right-3 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/10 bg-white/10 text-white backdrop-blur-sm transition-colors duration-[var(--duration-fast)] hover:bg-white/20"
             >
               <ChevronRight size={18} />
             </button>
@@ -119,7 +119,7 @@ export default function IplShowcaseCarousel() {
               className={`h-2.5 rounded-full transition-all duration-[var(--duration-fast)] ${
                 index === activeIndex
                   ? "w-8 bg-amber-glow"
-                  : "w-2.5 bg-midnight/75 hover:bg-midnight"
+                  : "w-2.5 bg-white/30 hover:bg-white/50"
               }`}
             />
           ))}

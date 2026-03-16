@@ -3,7 +3,7 @@ import ScrollReveal from "./ScrollReveal";
 
 export default function WhoItsForSection() {
   return (
-    <section id={SECTION_IDS.whoItsFor} className="py-20 md:py-24">
+    <section id={SECTION_IDS.whoItsFor} className="py-20 md:py-24 bg-[#0a0a0a]">
       <div className="mx-auto max-w-[var(--grid-max-width)] px-4 md:px-6">
         <div className="mx-auto max-w-[var(--grid-content-width)]">
           <ScrollReveal>
@@ -19,7 +19,7 @@ export default function WhoItsForSection() {
           <div className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory md:grid md:grid-cols-5 md:overflow-visible md:pb-0 md:snap-none scrollbar-hide">
             {AUDIENCES.map((audience, i) => (
               <ScrollReveal key={audience.title} delay={i * 80}>
-                <div className="group relative min-w-[260px] flex-shrink-0 snap-start overflow-hidden rounded-lg md:min-w-0 aspect-[3/4]">
+                <div className="group relative min-w-[260px] flex-shrink-0 snap-start overflow-hidden rounded-xl border border-white/[0.06] md:min-w-0 aspect-[3/4]">
                   {/* Gradient background placeholder */}
                   <div
                     className={`absolute inset-0 bg-gradient-to-b ${audience.gradient}`}
@@ -29,7 +29,7 @@ export default function WhoItsForSection() {
                     className="absolute inset-0"
                     style={{
                       background:
-                        "linear-gradient(180deg, transparent 40%, rgba(253,248,240,0.92) 100%)",
+                        "linear-gradient(180deg, transparent 40%, rgba(10,10,10,0.9) 100%)",
                     }}
                   />
 

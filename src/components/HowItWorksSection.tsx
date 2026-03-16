@@ -10,7 +10,7 @@ const ICON_MAP = {
 
 export default function HowItWorksSection() {
   return (
-    <section id={SECTION_IDS.howItWorks} className="py-20 md:py-24">
+    <section id={SECTION_IDS.howItWorks} className="py-20 md:py-24 bg-deep-navy">
       <div className="mx-auto max-w-[var(--grid-content-width)] px-4 md:px-6">
         <ScrollReveal>
           <p className="text-label text-amber-glow mb-3">HOW IT WORKS</p>
@@ -32,12 +32,12 @@ export default function HowItWorksSection() {
                 <ScrollReveal key={step.number} delay={i * 150}>
                   <div className="relative pl-16 md:pl-0 md:text-center">
                     {/* Decorative number */}
-                    <span className="absolute left-0 top-0 font-display text-[3rem] leading-none text-slate-blue md:relative md:mb-2 md:inline-block">
+                    <span className="absolute left-0 top-0 font-display text-[3.5rem] leading-none text-white/10 md:relative md:mb-2 md:inline-block md:text-[4.5rem]">
                       {step.number}
                     </span>
 
                     {/* Icon */}
-                    <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-amber-glow/10 md:mx-auto">
+                    <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-white/5 border border-white/10 md:mx-auto">
                       <Icon size={24} className="text-amber-glow" />
                     </div>
 

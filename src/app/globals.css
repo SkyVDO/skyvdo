@@ -5,19 +5,21 @@
    ============================================================ */
 @theme inline {
   /* Colors */
-  --color-midnight: #FDF8F0;
-  --color-deep-navy: #FFFFFF;
-  --color-slate-blue: #F5EDE0;
-  --color-twilight: #A78BFA;
-  --color-amber-glow: #B45309;
-  --color-sunset-orange: #C2410C;
+  --color-midnight: #0a0a0a;
+  --color-deep-navy: #111111;
+  --color-slate-blue: #1a1a1a;
+  --color-twilight: #2a2a2a;
+  --color-amber-glow: #4db8b8;
+  --color-sunset-orange: #3da8a8;
   --color-cinema-red: #B91C1C;
-  --color-starlight: #1C1917;
-  --color-moonstone: #57534E;
-  --color-dusk: #78716C;
-  --color-screen-white: #0A0E1A;
+  --color-starlight: #ffffff;
+  --color-moonstone: #b3b3b3;
+  --color-dusk: #666666;
+  --color-screen-white: #000000;
   --color-success: #047857;
-  --color-error: #B91C1C;
+  --color-error: #ef4444;
+  --color-cream: #f5f0e8;
+  --color-cream-dark: #1a1a1a;
 
   /* Font families */
   --font-display: var(--font-bebas-neue), Impact, sans-serif;
@@ -25,11 +27,11 @@
   --font-mono: var(--font-jetbrains-mono), "Fira Code", monospace;
 
   /* Shadows */
-  --shadow-raised: 0 1px 3px rgba(0, 0, 0, 0.08);
-  --shadow-elevated: 0 4px 12px rgba(0, 0, 0, 0.10);
-  --shadow-glow-amber: 0 0 30px rgba(180, 83, 9, 0.12);
-  --shadow-glow-amber-strong: 0 0 50px rgba(180, 83, 9, 0.20);
-  --shadow-card-hover: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --shadow-raised: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-elevated: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-glow-amber: 0 0 30px rgba(77, 184, 184, 0.12);
+  --shadow-glow-amber-strong: 0 0 50px rgba(77, 184, 184, 0.20);
+  --shadow-card-hover: 0 8px 24px rgba(0, 0, 0, 0.5);
 
   /* Easings */
   --ease-cinematic: cubic-bezier(0.25, 0.1, 0.25, 1);
@@ -41,21 +43,21 @@
    ============================================================ */
 :root {
   /* Semantic backgrounds */
-  --bg-primary: #FDF8F0;
-  --bg-surface: #FFFFFF;
-  --bg-surface-alt: #F5EDE0;
+  --bg-primary: #0a0a0a;
+  --bg-surface: #111111;
+  --bg-surface-alt: #1a1a1a;
 
   /* Borders */
-  --border-subtle: rgba(0, 0, 0, 0.06);
-  --border-default: rgba(0, 0, 0, 0.10);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-default: rgba(255, 255, 255, 0.15);
 
   /* Gradients */
-  --gradient-night-sky: linear-gradient(180deg, #FDF8F0 0%, #F5EDE0 50%, #DDD6FE 100%);
-  --gradient-amber-horizon: linear-gradient(135deg, #B45309 0%, #C2410C 100%);
-  --gradient-twilight-fade: linear-gradient(180deg, #A78BFA 0%, #FDF8F0 100%);
-  --gradient-screen-glow: radial-gradient(ellipse at center, rgba(180, 83, 9, 0.08) 0%, transparent 70%);
-  --gradient-hero-overlay: linear-gradient(to right, rgba(253, 248, 240, 0.92) 0%, rgba(253, 248, 240, 0.6) 60%, transparent 100%);
-  --gradient-card-overlay: linear-gradient(180deg, transparent 40%, rgba(253, 248, 240, 0.92) 100%);
+  --gradient-night-sky: linear-gradient(180deg, #0a0a0a 0%, #111111 50%, #1a1a1a 100%);
+  --gradient-amber-horizon: linear-gradient(135deg, #4db8b8 0%, #3da8a8 100%);
+  --gradient-twilight-fade: linear-gradient(180deg, #1a1a1a 0%, #0a0a0a 100%);
+  --gradient-screen-glow: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.03) 0%, transparent 70%);
+  --gradient-hero-overlay: linear-gradient(to right, rgba(10, 10, 10, 0.7) 0%, rgba(10, 10, 10, 0.4) 60%, transparent 100%);
+  --gradient-card-overlay: linear-gradient(180deg, transparent 40%, rgba(10, 10, 10, 0.85) 100%);
 
   /* Motion */
   --duration-fast: 150ms;
@@ -112,7 +114,7 @@ section[id] {
   font-size: 4.5rem;
   font-weight: 400;
   line-height: 1.0;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 
@@ -121,7 +123,7 @@ section[id] {
   font-size: 3.5rem;
   font-weight: 400;
   line-height: 1.0;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 
@@ -130,7 +132,7 @@ section[id] {
   font-size: 2.5rem;
   font-weight: 400;
   line-height: 1.1;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
 }
 
@@ -161,14 +163,14 @@ section[id] {
   font-family: var(--font-body);
   font-size: 1.125rem;
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.75;
 }
 
 .text-body-md {
   font-family: var(--font-body);
   font-size: 1rem;
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 .text-body-sm {

@@ -32,7 +32,7 @@ export default function MobileStickyBar() {
     >
       <a
         href={`#${SECTION_IDS.enquiry}`}
-        className="group flex h-11 flex-1 items-center justify-center gap-2 bg-amber-glow text-label text-midnight transition-all duration-[var(--duration-fast)] hover:bg-sunset-orange active:scale-[0.98]"
+        className="group flex h-11 flex-1 items-center justify-center gap-2 rounded-full bg-white text-label text-[#0a0a0a] transition-all duration-[var(--duration-fast)] hover:bg-white/90 active:scale-[0.98]"
       >
         Enquire
         <ArrowRight
@@ -44,7 +44,7 @@ export default function MobileStickyBar() {
         href={CONTACT.whatsappLink}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex h-11 flex-1 items-center justify-center gap-2 border-2 border-success bg-success/10 text-label text-success transition-all duration-[var(--duration-fast)] hover:bg-success/20 active:scale-[0.98]"
+        className="flex h-11 flex-1 items-center justify-center gap-2 rounded-full border-2 border-success bg-success/10 text-label text-success transition-all duration-[var(--duration-fast)] hover:bg-success/20 active:scale-[0.98]"
       >
         <MessageCircle size={16} />
         WhatsApp

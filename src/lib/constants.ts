@@ -84,17 +84,17 @@ export const AUDIENCES = [
   {
     title: "Apartment Communities",
     description: "Movie nights that bring your whole community together under the stars.",
-    gradient: "from-twilight/40 to-midnight",
+    gradient: "from-[#6366f1]/20 to-midnight",
   },
   {
     title: "Corporate Events",
     description: "Impress clients and reward teams with an unforgettable cinema experience.",
-    gradient: "from-sunset-orange/20 to-midnight",
+    gradient: "from-[#f59e0b]/15 to-midnight",
   },
   {
     title: "Schools & Colleges",
     description: "Screen festivals, fundraisers, and campus movie nights they'll never forget.",
-    gradient: "from-cinema-red/20 to-midnight",
+    gradient: "from-[#ef4444]/15 to-midnight",
   },
   {
     title: "Sports Screenings",

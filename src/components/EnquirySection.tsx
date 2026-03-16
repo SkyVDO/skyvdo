@@ -98,9 +98,9 @@ export default function EnquirySection() {
 
   if (submitted) {
     return (
-      <section id={SECTION_IDS.enquiry} className="py-20 md:py-24">
+      <section id={SECTION_IDS.enquiry} className="py-20 md:py-24 bg-[#0a0a0a]">
         <div className="mx-auto max-w-[var(--grid-narrow-width)] px-4 md:px-6">
-          <div className="rounded-lg border border-[var(--border-subtle)] bg-deep-navy p-8 text-center md:p-12">
+          <div className="p-8 text-center md:p-12">
             <CheckCircle size={48} className="mx-auto mb-4 text-success" />
             <h2 className="text-display-md text-starlight mb-4">
               YOU&apos;RE ALL SET!
@@ -115,7 +115,7 @@ export default function EnquirySection() {
               )}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex h-12 items-center gap-2 bg-success px-6 text-label text-midnight transition-all duration-[var(--duration-fast)] hover:bg-success/90 active:scale-[0.98]"
+              className="group inline-flex h-12 items-center gap-2 rounded-full bg-success px-6 text-label text-white transition-all duration-[var(--duration-fast)] hover:bg-success/90 active:scale-[0.98]"
             >
               Follow up on WhatsApp
               <ArrowRight
@@ -130,9 +130,9 @@ export default function EnquirySection() {
   }
 
   return (
-    <section id={SECTION_IDS.enquiry} className="py-20 md:py-24">
+    <section id={SECTION_IDS.enquiry} className="py-20 md:py-24 bg-[#0a0a0a]">
       <div className="mx-auto max-w-[var(--grid-narrow-width)] px-4 md:px-6">
-        <div className="rounded-lg border border-[var(--border-subtle)] bg-deep-navy p-6 md:p-8 lg:p-12">
+        <div className="p-6 md:p-8 lg:p-12">
           <h2 className="text-display-md text-starlight mb-2">
             LET&apos;S PLAN YOUR MOVIE NIGHT
           </h2>
@@ -293,7 +293,7 @@ export default function EnquirySection() {
             <button
               type="submit"
               disabled={submitting}
-              className="group mt-4 inline-flex h-14 w-full items-center justify-center gap-2 bg-amber-glow text-label text-midnight transition-all duration-[var(--duration-fast)] hover:bg-sunset-orange active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed"
+              className="group mt-4 inline-flex h-14 w-full items-center justify-center gap-2 rounded-full bg-white text-label text-[#0a0a0a] transition-all duration-[var(--duration-fast)] hover:bg-white/90 active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {submitting ? (
                 <>
