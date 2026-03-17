@@ -43,10 +43,10 @@ export default function ScrollReveal({
   return (
     <div
       ref={ref}
-      className={`transition-all duration-[600ms] ease-[var(--ease-cinematic)] ${
+      className={`transition-all duration-[var(--duration-cinematic)] ease-[var(--ease-cinematic)] ${
         visible
           ? "opacity-100 translate-y-0"
-          : "opacity-0 translate-y-6"
+          : "opacity-0 translate-y-[50px]"
       } ${className}`}
       style={{ transitionDelay: visible ? `${delay}ms` : "0ms" }}
     >

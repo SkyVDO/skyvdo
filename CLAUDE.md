@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-**SunDown Entertainment** — A Next.js website for a premium outdoor cinema rental service operating in Chennai & Coimbatore. The site features a cinema-inspired dark aesthetic with amber accents, showcasing rental packages for inflatable screens, 4K projectors, and sound systems.
+**SunDown Entertainment** — A Next.js website for a premium outdoor cinema rental service operating in Chennai & Coimbatore. The site features a cinema-inspired warm-ivory aesthetic with amber accents, showcasing rental packages for inflatable screens, 4K projectors, and sound systems.
 
 ## Development Commands
 
@@ -21,6 +21,8 @@ npm run start
 # Run linter
 npm run lint
 ```
+
+**Testing**: No test framework is configured in this project.
 
 ## Tech Stack
 
@@ -51,6 +53,12 @@ This project uses **Tailwind CSS v4**, which differs from v3:
 - **Design tokens** are defined in `src/app/globals.css` using CSS custom properties
 - **Custom typography classes** (`.text-display-xl`, `.text-heading-lg`, etc.) are defined in globals.css
 - Use Tailwind utility classes in components; for custom values, extend the `@theme` block in globals.css
+
+**Additional token groups defined in `:root` in `globals.css`** (not part of `@theme`):
+- **Z-index scale**: `--z-base` (0) through `--z-toast` (50)
+- **Duration hierarchy**: `--duration-fast` (150ms), `--duration-base` (250ms), `--duration-slow` (400ms), `--duration-cinematic` (800ms)
+- **Gradients**: `--gradient-hero-overlay`, `--gradient-card-overlay`, etc.
+- **Scroll margin**: All `section[id]` elements have `scroll-margin-top: 80px` to compensate for the sticky nav
 
 ### Path Aliases
 
@@ -84,7 +92,7 @@ A **frontend-designer agent** (`.claude/agents/frontend-designer.md`) is configu
 
 ### Key Design Principles
 
-- **Nocturnal palette**: Dark backgrounds (`#0A0E1A` Midnight, `#111827` Deep Navy) with amber accents (`#F59E0B`)
+- **Warm ivory palette**: Light backgrounds (`#FDF8F0` warm ivory, `#FFFFFF` white surfaces) with amber accents (`#F59E0B`). Note: semantic tokens like `--color-midnight` map to warm ivory, not dark navy — the site was converted from a dark to a light theme in commit `10306d3`.
 - **Cinematic typography**: Bebas Neue for headlines (always uppercase), Outfit for body, JetBrains Mono for pricing
 - **Sharp corners**: Buttons and accent blocks use `border-radius: 0` for a bold, cinematic feel
 - **Grid-driven layout**: Asymmetric modular grid inspired by `docs/design/references/ref1.webp`
@@ -150,8 +158,17 @@ Animation delays can be staggered with `.stagger-1` through `.stagger-6` classes
 ### Image Handling
 
 - **Remote images**: Only `images.unsplash.com` is allowed (configured in `next.config.ts`)
+- **Local images**: IPL carousel uses images from `/public/ipl/` — only Unsplash is allowed for remote images
 - Use Next.js `<Image>` component with proper `width`, `height`, and `alt` attributes
 - For images that might fail to load, use the `FallbackImage` component wrapper
+
+### IplShowcaseCarousel
+
+Auto-playing image carousel in HeroSection for IPL screening highlights. 5-second autoplay, pauses on hover/focus, supports keyboard navigation and `prefers-reduced-motion`. Images sourced from `/public/ipl/` directory.
+
+### MobileStickyBar
+
+Fixed bottom bar shown only on mobile (`md:hidden`) with Enquire + WhatsApp CTAs. Appears when the hero section scrolls out of view. Uses `env(safe-area-inset-bottom)` for notched device safety.
 
 ## Content Management
 
@@ -163,6 +180,7 @@ All site content lives in `src/lib/constants.ts`:
 - `PACKAGES`: Package offerings (name, description, features, highlighting)
 - `STEPS`: "How It Works" process steps
 - `GALLERY_IMAGES`: Visual proof gallery images
+- `IPL_CAROUSEL_IMAGES`: Array of local images in `/public/ipl/` for the IPL carousel
 - `CONTACT`: Phone, WhatsApp, email, social links
 - `NAV_ITEMS`: Navigation menu items
 - `FOOTER_LINKS`: Footer link groups

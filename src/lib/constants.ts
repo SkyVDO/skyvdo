@@ -32,6 +32,12 @@ export const CONTACT = {
   locations: "Chennai & Coimbatore",
 } as const;
 
+// Hero background image
+export const HERO_BG_IMAGE = {
+  src: "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?w=1920&h=1080&fit=crop&q=85",
+  alt: "Outdoor cinema screening under the night sky",
+} as const;
+
 // Hero content
 export const HERO = {
   overline: "PREMIUM OUTDOOR CINEMA & LIVE IPL NIGHTS",

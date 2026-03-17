@@ -51,7 +51,7 @@ export default function IplShowcaseCarousel() {
 
   return (
     <div
-      className="relative overflow-hidden rounded-lg border border-[var(--border-subtle)] bg-deep-navy shadow-raised"
+      className="relative overflow-hidden"
       role="region"
       aria-roledescription="carousel"
       aria-label="IPL outdoor screening highlights"

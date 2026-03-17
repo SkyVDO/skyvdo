@@ -8,7 +8,16 @@
       "Bash(timeout 10 npm run dev:*)",
       "Bash(grep:*)",
       "Bash(find:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(npm run:*)",
+      "Bash(node:*)",
+      "Bash(timeout:*)",
+      "Bash(npx playwright:*)",
+      "Bash(ls /Users/SriniMacMini/Documents/Sundown/playwright*)",
+      "Skill(update-config)",
+      "Read(//Users/SriniMacMini/.claude/**)",
+      "Bash(npx @playwright/mcp@latest --help)",
+      "mcp__playwright__*"
     ]
   }
 }
