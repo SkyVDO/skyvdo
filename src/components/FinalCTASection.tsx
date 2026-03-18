@@ -8,10 +8,7 @@ export default function FinalCTASection() {
       className="relative overflow-hidden py-24 md:py-32"
     >
       {/* Background */}
-      <div
-        className="absolute inset-0"
-        style={{ background: "var(--gradient-night-sky)" }}
-      />
+      <div className="absolute inset-0 bg-deep-navy" />
       <div
         className="absolute inset-0"
         style={{ background: "var(--gradient-screen-glow)" }}
@@ -24,7 +21,7 @@ export default function FinalCTASection() {
         </h2>
         <a
           href={`#${SECTION_IDS.enquiry}`}
-          className="group inline-flex h-14 items-center gap-2 bg-amber-glow px-8 text-label text-midnight transition-all duration-[var(--duration-fast)] hover:bg-sunset-orange active:scale-[0.98]"
+          className="group inline-flex h-14 items-center gap-2 rounded-full bg-white px-10 text-label text-[#0a0a0a] transition-all duration-[var(--duration-fast)] hover:bg-white/90 active:scale-[0.98]"
         >
           Enquire Now
           <ArrowRight

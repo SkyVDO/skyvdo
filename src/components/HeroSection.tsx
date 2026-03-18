@@ -6,10 +6,10 @@ export default function HeroSection() {
   return (
     <section
       id={SECTION_IDS.hero}
-      className="relative flex min-h-screen items-center overflow-hidden"
+      className="relative flex min-h-screen flex-col overflow-hidden"
     >
       {/* Background layers */}
-      <div className="absolute inset-0 bg-gradient-to-br from-midnight via-slate-blue to-twilight animate-hero-reveal" />
+      <div className="absolute inset-0 bg-[#0a0a0a] animate-hero-reveal" />
       <div
         className="absolute inset-0"
         style={{ background: "var(--gradient-screen-glow)" }}
@@ -18,16 +18,17 @@ export default function HeroSection() {
         className="absolute inset-0"
         style={{
           background:
-            "linear-gradient(to right, rgba(253,248,240,0.92) 0%, rgba(253,248,240,0.6) 60%, transparent 100%)",
+            "linear-gradient(to right, rgba(10,10,10,0.7) 0%, rgba(10,10,10,0.4) 60%, transparent 100%)",
         }}
       />
 
-      {/* Content */}
-      <div className="relative z-10 mx-auto w-full max-w-[var(--grid-max-width)] px-4 py-20 md:px-6 md:py-24 lg:py-32">
-        <div className="mb-8 max-w-[var(--grid-content-width)] animate-fade-up stagger-1 md:mb-10 lg:mb-12">
-          <IplShowcaseCarousel />
-        </div>
+      {/* Full-bleed carousel */}
+      <div className="relative z-10 w-full animate-fade-up stagger-1">
+        <IplShowcaseCarousel />
+      </div>
 
+      {/* Text content */}
+      <div className="relative z-10 mx-auto w-full max-w-[var(--grid-max-width)] px-4 py-10 md:px-6 md:py-12 lg:py-16">
         <div className="max-w-2xl">
           {/* Overline */}
           <p className="text-label text-amber-glow animate-fade-up stagger-2 mb-4">
@@ -49,7 +50,7 @@ export default function HeroSection() {
             {/* Primary CTA */}
             <a
               href={`#${SECTION_IDS.enquiry}`}
-              className="group inline-flex h-12 items-center gap-2 bg-amber-glow px-6 text-label text-midnight transition-all duration-[var(--duration-fast)] hover:bg-sunset-orange active:scale-[0.98]"
+              className="group inline-flex h-12 items-center gap-2 rounded-full bg-white px-8 text-label text-[#0a0a0a] transition-all duration-[var(--duration-fast)] hover:bg-white/90 active:scale-[0.98]"
             >
               {HERO.primaryCta}
               <ArrowRight
@@ -61,7 +62,7 @@ export default function HeroSection() {
             {/* Secondary CTAs */}
             <a
               href={`#${SECTION_IDS.packages}`}
-              className="group inline-flex h-12 items-center gap-2 border-2 border-starlight px-6 text-label text-starlight transition-all duration-[var(--duration-fast)] hover:border-amber-glow hover:bg-screen-white/[0.08] hover:text-amber-glow active:scale-[0.98]"
+              className="group inline-flex h-12 items-center gap-2 rounded-full border border-white/30 px-6 text-label text-white transition-all duration-[var(--duration-fast)] hover:bg-white/10 active:scale-[0.98]"
             >
               {HERO.secondaryCta1}
               <ArrowRight
@@ -72,7 +73,7 @@ export default function HeroSection() {
 
             <a
               href={`#${SECTION_IDS.howItWorks}`}
-              className="group inline-flex h-12 items-center gap-2 border-2 border-starlight px-6 text-label text-starlight transition-all duration-[var(--duration-fast)] hover:border-amber-glow hover:bg-screen-white/[0.08] hover:text-amber-glow active:scale-[0.98]"
+              className="group inline-flex h-12 items-center gap-2 rounded-full border border-white/30 px-6 text-label text-white transition-all duration-[var(--duration-fast)] hover:bg-white/10 active:scale-[0.98]"
             >
               {HERO.secondaryCta2}
               <ArrowRight

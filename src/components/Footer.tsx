@@ -2,7 +2,7 @@ import { CONTACT, FOOTER_LINKS, SECTION_IDS } from "@/lib/constants";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-[var(--border-subtle)] bg-deep-navy">
+    <footer className="border-t border-[var(--border-subtle)] bg-[#0a0a0a]">
       <div className="mx-auto max-w-[var(--grid-content-width)] px-4 py-16 md:px-6">
         {/* Logo + tagline */}
         <div className="mb-8">

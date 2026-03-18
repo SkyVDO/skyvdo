@@ -26,8 +26,8 @@ export default function Navigation() {
     <header
       className={`fixed top-0 left-0 right-0 z-[var(--z-sticky)] transition-all duration-[var(--duration-base)] ${
         scrolled
-          ? "bg-midnight border-b border-[var(--border-subtle)]"
-          : "bg-midnight/85 backdrop-blur-[12px]"
+          ? "bg-[#0a0a0a]/95 backdrop-blur-[12px] border-b border-[var(--border-subtle)]"
+          : "bg-transparent"
       }`}
     >
       <div className="mx-auto flex h-[72px] max-w-[var(--grid-max-width)] items-center justify-between px-6 md:h-[72px]">
@@ -52,26 +52,36 @@ export default function Navigation() {
           ))}
           <a
             href={`#${SECTION_IDS.enquiry}`}
-            className="text-label text-amber-glow transition-colors duration-[var(--duration-fast)] hover:text-sunset-orange"
+            className="rounded-full border border-white/30 px-5 py-2 text-label text-amber-glow transition-all duration-[var(--duration-fast)] hover:bg-white hover:text-[#0a0a0a]"
           >
             Enquire
           </a>
         </nav>
 
-        {/* Mobile hamburger */}
-        <button
-          onClick={() => setMenuOpen(!menuOpen)}
-          className="relative z-[var(--z-overlay)] flex h-11 w-11 items-center justify-center text-moonstone transition-colors hover:text-amber-glow md:hidden"
-          aria-label={menuOpen ? "Close menu" : "Open menu"}
-          aria-expanded={menuOpen}
-        >
-          {menuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        {/* Mobile hamburger — only shown when menu is closed */}
+        {!menuOpen && (
+          <button
+            onClick={() => setMenuOpen(true)}
+            className="flex h-11 w-11 items-center justify-center text-moonstone transition-colors hover:text-amber-glow md:hidden"
+            aria-label="Open menu"
+            aria-expanded={false}
+          >
+            <Menu size={24} />
+          </button>
+        )}
       </div>
 
-      {/* Mobile menu overlay */}
+      {/* Mobile menu overlay — close button lives inside so z-index stacking works */}
       {menuOpen && (
-        <div className="fixed inset-0 z-[var(--z-overlay)] flex flex-col items-center justify-center gap-12 bg-midnight md:hidden">
+        <div className="fixed inset-0 z-[var(--z-overlay)] flex flex-col items-center justify-center gap-12 bg-[#0a0a0a] md:hidden">
+          {/* Close button */}
+          <button
+            onClick={() => setMenuOpen(false)}
+            className="absolute top-4 right-5 flex h-11 w-11 items-center justify-center text-moonstone transition-colors hover:text-amber-glow"
+            aria-label="Close menu"
+          >
+            <X size={24} />
+          </button>
           {NAV_ITEMS.map((item) => (
             <a
               key={item.href}
