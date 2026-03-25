@@ -34,7 +34,7 @@ export default function Navigation() {
         {/* Logo */}
         <a href="#" className="flex flex-col leading-none">
           <span className="font-display text-[1.75rem] leading-[0.9] tracking-[0.02em] text-starlight uppercase">
-            SUNDOWN
+            SKYVDO
           </span>
           <span className="text-label text-amber-glow">ENTERTAINMENT</span>
         </a>
