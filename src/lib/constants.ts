@@ -1,5 +1,5 @@
 // ============================================================
-// SunDown Entertainment — Constants & Content
+// SkyVDO Entertainment — Constants & Content
 // ============================================================
 
 // Section IDs (used for anchor links and scroll targets)
@@ -26,9 +26,9 @@ export const CONTACT = {
   whatsappNumber: "919566071168",
   whatsappLink: "https://wa.me/919566071168",
   phone: "+91 95660 71168",
-  email: "hello@sundownentertainment.in",
-  instagram: "https://instagram.com/sundownentertainment",
-  youtube: "https://youtube.com/@sundownentertainment",
+  email: "hello@skyvdo.com",
+  instagram: "https://instagram.com/skyvdoentertainment",
+  youtube: "https://youtube.com/@skyvdoentertainment",
   locations: "Chennai & Coimbatore",
 } as const;
 

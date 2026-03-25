@@ -27,7 +27,7 @@ export async function POST(request: Request) {
 
     const emailHtml = `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; background: #FFFFFF; color: #1C1917; padding: 32px; border-radius: 8px;">
-        <h1 style="color: #B45309; font-size: 24px; margin-bottom: 24px;">New Enquiry from SunDown Website</h1>
+        <h1 style="color: #B45309; font-size: 24px; margin-bottom: 24px;">New Enquiry from SkyVDO Website</h1>
 
         <table style="width: 100%; border-collapse: collapse;">
           <tr>
@@ -63,8 +63,8 @@ export async function POST(request: Request) {
     `;
 
     await resend.emails.send({
-      from: process.env.RESEND_FROM_EMAIL || "SunDown Website <onboarding@resend.dev>",
-      to: process.env.ENQUIRY_EMAIL || "hello@sundownentertainment.in",
+      from: process.env.RESEND_FROM_EMAIL || "SkyVDO Entertainment <onboarding@resend.dev>",
+      to: process.env.ENQUIRY_EMAIL || "hello@skyvdo.com",
       subject: `New Enquiry: ${eventType} — ${name}`,
       html: emailHtml,
       replyTo: undefined, // No email collected from visitor

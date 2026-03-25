@@ -24,7 +24,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "SunDown Entertainment — Premium Outdoor Cinema Rentals",
+  title: "SkyVDO Entertainment — Premium Outdoor Cinema Rentals",
   description:
     "Transform any space into an open-air cinema. Premium inflatable screens, 4K projectors, and cinematic sound for unforgettable movie nights under the stars. Chennai & Coimbatore.",
   keywords: [
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     "backyard movie",
   ],
   openGraph: {
-    title: "SunDown Entertainment — Premium Outdoor Cinema Rentals",
+    title: "SkyVDO Entertainment — Premium Outdoor Cinema Rentals",
     description:
       "Transform any space into an open-air cinema. Premium screens, projectors, and sound for unforgettable movie nights.",
     type: "website",

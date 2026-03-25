@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="mb-8">
           <div className="mb-2 flex flex-col leading-none">
             <span className="font-display text-[1.75rem] leading-[0.9] tracking-[0.02em] text-starlight uppercase">
-              SUNDOWN
+              SKYVDO
             </span>
             <span className="text-label text-amber-glow">ENTERTAINMENT</span>
           </div>
@@ -106,7 +106,7 @@ export default function Footer() {
 
         {/* Copyright */}
         <p className="text-body-sm text-dusk">
-          &copy; {new Date().getFullYear()} SunDown Entertainment. {CONTACT.locations}.
+          &copy; {new Date().getFullYear()} SkyVDO Entertainment. {CONTACT.locations}.
         </p>
       </div>
     </footer>
